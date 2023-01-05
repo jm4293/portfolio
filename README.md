@@ -7,12 +7,18 @@
 - styled-components
     - npm install styled-components
     - version: 5.3.6
-    - [문서](https://www.npmjs.com/package/@fullpage/react-fullpage?activeTab=readme)
 
 
-- @fullpage/react-fullpage
-    - npm install @fullpage/react-fullpage
-    - version: 0.1.31
+- react-icons
+  - npm install react-icons --save
+  - version: 4.7.1
+
+
+- ~~@fullpage/react-fullpage~~
+    - ~~npm install @fullpage/react-fullpage~~
+    - ~~version: 0.1.31~~
+    - ~~[문서](https://www.npmjs.com/package/@fullpage/react-fullpage?activeTab=readme)~~
+
 
 ## 실행 방법
 - npm start
