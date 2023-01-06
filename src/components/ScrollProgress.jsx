@@ -50,14 +50,15 @@ function ScrollProgress() {
 const Bottom = styled.div`
     width: 100%;
     height: 4px;
-    background-color: ${props => props.theme.bgColor};
+    background-color: ${props => props.theme.ScrollBottomColor};
     position: fixed;
     cursor: pointer;
+    z-index: 99;
 `;
 
 const Top = styled.div`
     height: 100%;
-    background-color: ${props => props.theme.color};
+    background-color: ${props => props.theme.ScrollTopColor};
 `;
 
 export default ScrollProgress;
