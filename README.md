@@ -2,7 +2,7 @@
 
 ## 개발언어
 - React
-
+˜
 ## 추가 패키지
 - styled-components
     - npm install styled-components
@@ -12,6 +12,16 @@
 - react-icons
   - npm install react-icons --save
   - version: 4.7.1
+
+
+- react-router-dom
+  - npm install react-router-dom --save
+  - 6.6.1
+
+
+- @mui/icons-material 
+  - npm install @mui/icons-material 
+  - version: 5.11.0
 
 
 - ~~@fullpage/react-fullpage~~
