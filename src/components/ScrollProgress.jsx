@@ -10,6 +10,7 @@ function ScrollProgress() {
         const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
         const heightMax = scrollHeight - clientHeight;
+
         const heightPercent = scrollTop / heightMax;
 
         setScrolly(heightPercent * 100);
@@ -22,6 +23,7 @@ function ScrollProgress() {
             window.removeEventListener('scroll', scroll, true);
         }
     }, [scroll])
+
 
     // 스크롤 바 클릭시 이벤트
     const bottomClick = (e) => {
