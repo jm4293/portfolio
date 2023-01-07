@@ -4,22 +4,6 @@ import { BiSun, BiMoon } from 'react-icons/bi';                 // 다크모드 
 import ReorderIcon from '@mui/icons-material/Reorder';
 
 function Header({ isDarkMode, setIsDarkMode, isModalSlide, setIsModalSlide }) {
-    const [scrollY, setScrollY] = useState(0);
-
-    const scroll = useCallback(() => {
-        const { scrollTop } = document.documentElement;
-        console.log(scrollTop)
-        setScrollY(scrollTop);
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('scroll', scroll, true);
-
-        return () => {
-            window.removeEventListener('scroll', scroll, true);
-        }
-    }, [scroll])
-
     return (
         <Frame>
             <DarkModeIconStyled onClick={() => setIsDarkMode(!isDarkMode)}>

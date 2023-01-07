@@ -22,7 +22,7 @@ function ModalPopup({ isModalPopup, setIsModalPopup }) {
         <>
             <ModalBackGround isModalPopup={isModalPopup}>
                 <Modal ref={useref}>
-                    <button onClick={() => setIsModalPopup(false)}>X</button>
+                    <button onClick={() => setIsModalPopup(false)}>돌아가기</button>
                 </Modal>
             </ModalBackGround>
         </>
