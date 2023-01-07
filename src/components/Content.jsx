@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+// import useGotoElement from "./useGotoElement";
 
-function Content({isModalPopup, setIsModalPopup}) {
+function Content({ isModalPopup, setIsModalPopup }) {
+    // const {element, gotoElement} = useGotoElement()
+
+
+
     return (
         <Frame>
-            <Introduce>
+            <Introduce id="INTRO">
+                <div>INTRO</div>
                 <div>안녕하세요. 프론트엔드 개발자로서</div>
                 <div>저의 가능성을 보고 </div>
             </Introduce>
-            <BoxTwo onClick={() => setIsModalPopup(!isModalPopup)}>ABOUT</BoxTwo>
-            <BoxOne onClick={() => setIsModalPopup(!isModalPopup)}>프로젝트</BoxOne>
-            <BoxThree onClick={() => setIsModalPopup(!isModalPopup)}>SKILLS</BoxThree>
-            <BoxFour onClick={() => setIsModalPopup(!isModalPopup)}>CAREER</BoxFour>
+
+            <div id="ABOUT">
+                <BoxTwo onClick={() => setIsModalPopup(!isModalPopup)}>ABOUT</BoxTwo>
+            </div>
+            <div id="PROJECT">
+                <BoxOne  onClick={() => setIsModalPopup(!isModalPopup)}>PROJECT</BoxOne>
+            </div>
+            <div id="SKILLS">
+                <BoxThree  onClick={() => setIsModalPopup(!isModalPopup)}>SKILLS</BoxThree>
+            </div>
+            <div id="CAREER">
+                <BoxFour  onClick={() => setIsModalPopup(!isModalPopup)}>CAREER</BoxFour>
+            </div>
+
+
 
             <div>학습에서 즐거움을 찾는 개발자 ~ 입니다.</div>
             <div>새로운 변화에 고통보단 즐거움을 느끼며 성장하는 습관을 만들어 가고 있습니다.</div>
@@ -25,13 +42,9 @@ function Content({isModalPopup, setIsModalPopup}) {
 }
 
 const Frame = styled.div`
-    /* border: 1px solid blue; */
     margin-top: 20px;
-    /* width: 100vw; */
-    height: 200vh;
-    /* margin-top: 10vw; */
+    height: 250vh;
     background-color: ${props => props.theme.bgColor};
-    /* background-color: beige; */
     color: ${props => props.theme.color};
     display: flex;
     flex-direction: column;
@@ -46,7 +59,6 @@ const List = styled.div`
     padding: 10px 50px;
     border: 1px solid black;
     margin: 20px
-    /* width: 100%; */
 `;
 
 const Introduce = styled(List)`
@@ -57,6 +69,8 @@ const Introduce = styled(List)`
 
 const Box = styled(List)`
     cursor: pointer;
+    margin: 200px 0;
+    
 
     &:hover{
         transform: scale(1.1);

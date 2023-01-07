@@ -1,8 +1,8 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, {useState, useCallback, useEffect} from "react";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";      // 전역 styled component 설정
+import {ThemeProvider} from "styled-components";      // 전역 styled component 설정
 import GlobalStyle from "./components/GlobalStyle";             // 전역 styled component 설정
-import { darkTheme, lightTheme } from "./components/Theme";     // 다크모드 색상 설정
+import {darkTheme, lightTheme} from "./components/Theme";     // 다크모드 색상 설정
 
 import ScrollProgress from "./components/ScrollProgress";
 import ModalSlide from "./components/ModalSlide";
@@ -12,6 +12,7 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 import ScrollTopButton from "./components/ScrollTopButton";
 
+
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);        // 다크모드 on off
     const [isModalPopup, setIsModalPopup] = useState(false);    // 팝업 모달 on off
@@ -20,8 +21,8 @@ function App() {
     const [scrollProg, setScrollprog] = useState(0);            // 스크롤 진행바 계산 값
 
     const handler = useCallback(() => {
-        const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-        
+        const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+
         // ScrollTopButton 사용
         setScrollT(scrollTop);                                  // 실시간 스크롤 값
 
@@ -43,28 +44,23 @@ function App() {
     return (
         <Frame>
             <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-                <GlobalStyle />
-                <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isModalSlide={isModalSlide} setIsModalSlide={setIsModalSlide} />
+                <GlobalStyle/>
+                <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isModalSlide={isModalSlide}
+                        setIsModalSlide={setIsModalSlide}/>
                 <ScrollProgress scrollProg={scrollProg} isModalSlide={isModalSlide}/>
 
                 <Main>
                     <div style={{width: '100vw'}}>
-                        <Content isModalPopup={isModalPopup} setIsModalPopup={setIsModalPopup} />
-                        {
-                            isModalPopup && <ModalPopup isModalPopup={isModalPopup} setIsModalPopup={setIsModalPopup} />
-                        }
-                        <Footer />
+                        <Content isModalPopup={isModalPopup} setIsModalPopup={setIsModalPopup}/>
+                        {isModalPopup && <ModalPopup isModalPopup={isModalPopup} setIsModalPopup={setIsModalPopup}/>}
+                        <Footer/>
                     </div>
                     <div>
-                        {
-                            isModalSlide && <ModalSlide isModalSlide={isModalSlide} setIsModalSlide={setIsModalSlide} />
-                        }
-                        {
-                            scrollT > 300 && <ScrollTopButton />
-                        }
+                        {isModalSlide && <ModalSlide scrollT={scrollT} setIsModalSlide={setIsModalSlide}/>}
+                        {scrollT > 300 && <ScrollTopButton isModalSlide={isModalSlide}/>}
                     </div>
                 </Main>
-                <GlobalStyle />
+                <GlobalStyle/>
             </ThemeProvider>
         </Frame>
     );

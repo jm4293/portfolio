@@ -18,6 +18,20 @@ function ModalPopup({ isModalPopup, setIsModalPopup }) {
         }
     })
 
+    useEffect(() => {
+        document.body.style.cssText = `
+            position: fixed;
+            top: -${window.scrollY}px;
+            overflow-y: scroll;
+            width: 100%
+        `;
+        return () => {
+            const scrollY = document.body.style.top;
+            document.body.style.cssText = '';
+            window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+        }
+    }, [])
+
     return (
         <>
             <ModalBackGround isModalPopup={isModalPopup}>
@@ -62,8 +76,8 @@ const ModalBackGround = styled.div`
 `;
 
 const Modal = styled.div`
-    width: 400px;
-    height: 700px;
+    width: 90vw;
+    height: 80vh;
     border: 1px solid black;
     box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.8);
     border-radius: 10px;

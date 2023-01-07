@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { BsArrowUpSquare } from "react-icons/bs"
 
-function ScrollTopButton() {
+
+function ScrollTopButton({isModalSlide}) {
 
     const onclickTop = () => {
         window.scrollTo({
@@ -11,19 +13,27 @@ function ScrollTopButton() {
     }
 
     return (
-        <Frame>
-            <button onClick={onclickTop}>처음으로</button>
+        <Frame isModalSlide={isModalSlide}>
+            <StyledBsArrowUpSquare onClick={onclickTop}/>
         </Frame>
     )
 }
 
 const Frame = styled.div`
-    /* width: 50px; */
-    /* height: 50px; */
-    /* border: 1px solid black; */
     position: fixed;
-    right: 5%;
-    bottom: 5%;
+    /* right: 50%; */
+    right: ${props => props.isModalSlide ? 56 : 50}%;
+    bottom: 10%;
+`;
+
+const StyledBsArrowUpSquare = styled(BsArrowUpSquare)`
+    cursor: pointer;
+    transform: scale(1.8);
+    
+    &:hover{
+        transform: scale(2.2);
+        transition: transform .5s;
+    }
 `;
 
 export default ScrollTopButton;

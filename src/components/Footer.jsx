@@ -5,25 +5,27 @@ import { BsGithub } from "react-icons/bs"
 function Footer() {
     return (
         <Frame>
+            <div style={{flexGrow: "1"}}></div>
             <div style={{margin: "0 30px"}}>@jm4293</div>
             <div>2023.01.10</div>
-            <div style={{flexGrow: "1"}}></div>
+            <div style={{flexGrow: "8"}}></div>
             <FooterIcon>
                 <FooterIconLink href="https://velog.io/@jm4293">Blog</FooterIconLink>
             </FooterIcon>
             <FooterIcon>
                 <FooterIconLink href="https://github.com/jm4293"><FooterIconImgGithub /></FooterIconLink>
             </FooterIcon>
+            <div style={{flexGrow: "1"}}></div>
         </Frame>
     )
 }
 
 const Frame = styled.div`
     /* width: 100%; */
-    height: 10vh;
+    height: 6vh;
     border-top: 1px solid ${props => props.theme.color};
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 `;
 

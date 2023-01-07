@@ -9,8 +9,8 @@ function Header({ isDarkMode, setIsDarkMode, isModalSlide, setIsModalSlide }) {
             <DarkModeIconStyled onClick={() => setIsDarkMode(!isDarkMode)}>
                 {isDarkMode ? <BiMoon /> : <BiSun />}
             </DarkModeIconStyled>
-            <div style={{ fontSize: '24px' }}>jm's portfolio</div>
-            <ReorderIconStyled onClick={() => setIsModalSlide(!isModalSlide)} />
+            <div id="header" style={{ fontSize: '24px' }}>jm's portfolio</div>
+           <ReorderIconStyled onClick={() => setIsModalSlide(!isModalSlide)}/>
         </Frame>
     )
 }
@@ -18,7 +18,7 @@ function Header({ isDarkMode, setIsDarkMode, isModalSlide, setIsModalSlide }) {
 const Frame = styled.div`
     position: sticky;
     top: 0;
-    height: 10vh;
+    height: 8vh;
     background-color: ${props => props.theme.bgColor};
     
     color: ${props => props.theme.color};
