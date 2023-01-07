@@ -10,12 +10,15 @@ function ModalSlide() {
 }
 
 const Frame = styled.div`
-    width: 20vw;
+    width: 250px;
     height: 60vh;
+    margin-top: 50px;
     /* background-color: beige; */
     border: 1px solid black;
-    position: relative;
-    left: 107%;
+    /* position: relative; */
+    /* float: left; */
+    /* left: 0; */
+    /* display: none; */
 `;
 
 export default ModalSlide;

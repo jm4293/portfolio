@@ -14,26 +14,30 @@ import Footer from "./components/Footer";
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);        // 다크모드 on off
     const [isModalPopup, setIsModalPopup] = useState(false);    // 팝업 모달 on off
-    const [isModalSlide, setIsModalSlide] = useState(false);    // 팝업 모달 on off
+    const [isModalSlide, setIsModalSlide] = useState(false);    // 슬라이드 모달 on off
 
     return (
-        <Frame isModalSlide={isModalSlide}>
+        <Frame>
             <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
                 <GlobalStyle />
                 <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isModalSlide={isModalSlide} setIsModalSlide={setIsModalSlide} />
-                <ScrollProgress />
-                <div style={{display: "flex"}}>
-                    {
-                        isModalSlide && <ModalSlide isModalSlide={isModalSlide} setIsModalSlide={setIsModalSlide} />
-                    }
-                    <div style={{position: "relative", left: "7%"}}>
+                <div>
+                    <ScrollProgress isModalSlide={isModalSlide}/>
+                </div>
+                <Aa>
+                    <div style={{width: '100vw'}}>
                         <Content isModalPopup={isModalPopup} setIsModalPopup={setIsModalPopup} />
                         {
                             isModalPopup && <ModalPopup isModalPopup={isModalPopup} setIsModalPopup={setIsModalPopup} />
                         }
                         <Footer />
                     </div>
-                </div>
+                    <div>
+                        {
+                            isModalSlide && <ModalSlide isModalSlide={isModalSlide} setIsModalSlide={setIsModalSlide} />
+                        }
+                    </div>
+                </Aa>
                 <GlobalStyle />
             </ThemeProvider>
         </Frame>
@@ -41,8 +45,13 @@ function App() {
 }
 
 const Frame = styled.div`
-    position: relative; 
-    right: ${props => props.isModalSlide ? 25 : 0}%;
+    width: 100%;
+    position: relative;
+`;
+
+const Aa = styled.div`
+    display: flex;
+    right: ${props => props.isModalSlide ? 250 : 0}px;
 `;
 
 export default App;

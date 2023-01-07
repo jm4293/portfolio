@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import styled from "styled-components";
 
-function ScrollProgress() {
+function ScrollProgress({isModalSlide}) {
     const ref = useRef(null);
     const [scrolly, setScrolly] = useState(0);
 
@@ -42,7 +42,7 @@ function ScrollProgress() {
 
     return (
         <>
-            <Bottom ref={ref} onClick={bottomClick}>
+            <Bottom ref={ref} onClick={bottomClick} isModalSlide={isModalSlide} >
                 <Top style={{ width: scrolly + '%' }} />
             </Bottom>
         </>
@@ -52,10 +52,12 @@ function ScrollProgress() {
 const Bottom = styled.div`
     width: 100%;
     height: 4px;
+    right: ${props => props.isModalSlide ? 250 : 0}px;
+    
     background-color: ${props => props.theme.ScrollBottomColor};
     position: fixed;
     cursor: pointer;
-    z-index: 99;
+    /* z-index: 99; */
 `;
 
 const Top = styled.div`
