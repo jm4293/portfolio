@@ -5,12 +5,9 @@ import { BsGithub } from "react-icons/bs"
 function Footer() {
     return (
         <Frame>
-            <div style={{margin: '0 30px'}}>이재민 포트폴리오</div>
-            <div>@jm4293</div>
+            <div style={{margin: "0 30px"}}>@jm4293</div>
+            <div>2023.01.10</div>
             <div style={{flexGrow: "1"}}></div>
-            <FooterIcon>
-                <FooterIconLink>E-mail</FooterIconLink>
-            </FooterIcon>
             <FooterIcon>
                 <FooterIconLink href="https://velog.io/@jm4293">Blog</FooterIconLink>
             </FooterIcon>
@@ -22,6 +19,7 @@ function Footer() {
 }
 
 const Frame = styled.div`
+    /* width: 100%; */
     height: 10vh;
     border-top: 1px solid ${props => props.theme.color};
     display: flex;

@@ -17,14 +17,16 @@ function Content({isModalPopup, setIsModalPopup}) {
 
 const Frame = styled.div`
     /* border: 1px solid blue; */
-    margin: 10px;
+    margin-top: 20px;
+    /* width: 100vw; */
     height: 200vh;
+    /* margin-top: 10vw; */
     background-color: ${props => props.theme.bgColor};
+    /* background-color: beige; */
     color: ${props => props.theme.color};
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 `;
 
 const List = styled.div`
@@ -33,17 +35,19 @@ const List = styled.div`
     border-radius: 50px;
     box-sizing: border-box;
     padding: 10px 50px;
-    margin: 20px;
+    border: 1px solid black;
+    margin: 20px
+    /* width: 100%; */
 `;
 
 const Introduce = styled(List)`
-    border: 1px solid black;
-    width: 80vw;
-    height: 50vh;
+    /* border: 1px solid black; */
+    /* width: 80vw; */
+    /* height: 50vh; */
 `;
 
 const Box = styled(List)`
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* width: 200px; */
     /* height: 20vh; */
     cursor: pointer;
