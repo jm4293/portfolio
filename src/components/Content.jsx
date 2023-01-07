@@ -2,31 +2,26 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 // import useGotoElement from "./useGotoElement";
 
-function Content({ isModalPopup, setIsModalPopup }) {
-    // const {element, gotoElement} = useGotoElement()
-
-
-
+function Content() {
     return (
         <Frame>
-            <Introduce id="INTRO">
-                <div>INTRO</div>
-                <div>안녕하세요. 프론트엔드 개발자로서</div>
-                <div>저의 가능성을 보고 </div>
-            </Introduce>
-
-            <div id="ABOUT">
-                <BoxTwo onClick={() => setIsModalPopup(!isModalPopup)}>ABOUT</BoxTwo>
-            </div>
-            <div id="PROJECT">
-                <BoxOne  onClick={() => setIsModalPopup(!isModalPopup)}>PROJECT</BoxOne>
-            </div>
-            <div id="SKILLS">
-                <BoxThree  onClick={() => setIsModalPopup(!isModalPopup)}>SKILLS</BoxThree>
-            </div>
-            <div id="CAREER">
-                <BoxFour  onClick={() => setIsModalPopup(!isModalPopup)}>CAREER</BoxFour>
-            </div>
+            <List id="INTRO">
+                <h1>INTRO</h1>
+                <h3>새로운 변화에 고통보단 즐거움을 느끼며 성장하는 프론트엔드 개발자 입니다</h3>
+                <h3>사용자가 편리한 웹을 만드는 개바랒가 되기 위해 노력중입니다.</h3>
+            </List>
+            <List id="ABOUT">
+                <h1>ABOUT</h1>
+            </List>
+            <List id="PROJECT">
+                <h1>PROJECT</h1>
+            </List>
+            <List id="SKILLS">
+                <h1>SKILLS</h1>
+            </List>
+            <List id="CAREER">
+                <h1>CAREER</h1>
+            </List>
 
 
 
@@ -52,46 +47,7 @@ const Frame = styled.div`
 `;
 
 const List = styled.div`
-    background-color: ${props => props.theme.ContentListbgColor};
     color: ${props => props.theme.ContentListColor};
-    border-radius: 50px;
-    box-sizing: border-box;
-    padding: 10px 50px;
-    border: 1px solid black;
-    margin: 20px
-`;
-
-const Introduce = styled(List)`
-    /* border: 1px solid black; */
-    /* width: 80vw; */
-    /* height: 50vh; */
-`;
-
-const Box = styled(List)`
-    cursor: pointer;
-    margin: 200px 0;
-    
-
-    &:hover{
-        transform: scale(1.1);
-        transition: transform .5s;
-    } 
-`;
-
-const BoxOne = styled(Box)`
-
-`;
-
-const BoxTwo = styled(Box)`
-
-`;
-
-const BoxThree = styled(Box)`
-
-`;
-
-const BoxFour = styled(Box)`
-
 `;
 
 export default Content;

@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components";
 function ModalPopup({ isModalPopup, setIsModalPopup }) {
     const useref = useRef(null);
 
+    // 모달 외부 영역 클릭하면 모달 종료
     const handler = (e) => {
         if (!useref.current.contains(e.target)) {
             setIsModalPopup(false);
@@ -18,6 +19,7 @@ function ModalPopup({ isModalPopup, setIsModalPopup }) {
         }
     })
 
+    // 모달 실행 중 스크롤 막기
     useEffect(() => {
         document.body.style.cssText = `
             position: fixed;
