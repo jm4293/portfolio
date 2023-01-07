@@ -2,7 +2,7 @@
 
 ## 개발언어
 - React
-˜
+
 ## 추가 패키지
 - styled-components
     - npm install styled-components
