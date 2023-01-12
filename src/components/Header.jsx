@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { BiSun, BiMoon } from 'react-icons/bi';                 // 다크모드 아이콘 설정
-import ReorderIcon from '@mui/icons-material/Reorder';
 import ScrollProgress from './ScrollProgress';
+import TopButton from "./TopButton";
 
 function Header({ isDarkMode, setIsDarkMode, isModalSlide, setIsModalSlide }) {
     const [change, setChange] = useState(false);                    
@@ -57,45 +57,28 @@ function Header({ isDarkMode, setIsDarkMode, isModalSlide, setIsModalSlide }) {
             <Bottom>
                 <ScrollProgress scrollProg={scrollProg} />
             </Bottom>
+            <TopButton change={change}/>
         </Frame>
     )
 }
 
 const Frame = styled.div`
-    /* position: absolute; */
-    /* top: 0; */
-    /* height: 200px; */
-    /* position: absolute; */
     position: ${props => props.change ? "fixed" : "absolute"};
     width: ${props => props.change ? 90 : 100}%;
-    /* top: 0; */
     height: ${props => props.change ? 100 : 200}px;
-    /* width: 90%; */
-    /* border: 1px solid red; */
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.color};
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 200px; */
-    /* border-bottom: 1px solid black; */
 
-    /* transition: height .1s; */
-    
-    /* z-index: 100; */
-    /* font-weight: 600; */
 `;
 
 const Top = styled.div`
     width: 100%;
-    /* height: 100px; */
-    /* position: absolute; */
     height: 199px;
     display: flex;
     justify-content: space-around;
-    /* border: 1px solid blue; */
-    /* justify-content: ${props => props.change ? "space-between" : "space-around"}; */
     align-items: center;
-    /* border: 1px solid black; */
 `;
 
 const DarkModeIcon = styled.div`
@@ -110,14 +93,12 @@ const DarkModeIcon = styled.div`
 
 const HiddenItem = styled.div`
     display: ${props => props.change ? "block" : "none"};
+    cursor: pointer;
 `;
 
 const Bottom = styled.div`
-/* position: absolute; */
-    /* border: 1px solid blue; */
     width: 100%;
     height: 1px;
-    /* clear: both; */
 `;
 
 export default Header;

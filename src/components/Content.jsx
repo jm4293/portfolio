@@ -41,7 +41,7 @@ function Content() {
                 <h3 style={{ marginTop: "30px" }}>FrontEnd</h3>
                 <Line />
                 {isModal && <ModalPopup isModal={isModal} setIsModal={setIsModal} isModalNumber={isModalNumber} />}
-                <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+                <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
                     <ProjectItem>
                         <StyledImg src="/images/portfolio_.png" onClick={() => click(0)} />
                         <div style={{ textAlign: "center", fontSize: "20px" }}>PortFolio <a href="https://github.com/jm4293/portfolio" style={{ color: "black" }}><StyledBsGithub /></a></div>
@@ -69,7 +69,7 @@ function Content() {
                 </div>
                 <h3 style={{ marginTop: "30px" }}>BackEnd</h3>
                 <Line />
-                <div style={{ display: "flex", justifyContent: "center"}}>
+                <div style={{ display: "flex", justifyContent: "center" }}>
                     <ProjectItem>
                         <StyledImg src="/images/server_.jpg" onClick={() => click(6)} />
                         <div style={{ textAlign: "center", fontSize: "20px" }}>Server <a href="https://github.com/jm4293/React-test/blob/main/server/server.js" style={{ color: "black" }}><StyledBsGithub /></a></div>
@@ -111,18 +111,13 @@ function Content() {
 }
 
 const Frame = styled.div`
-    /* margin-top: 20px; */
-    /* height: 330vh; */
     width: 100%;
-    /* border: 1px solid violet; */
-    /* margin: auto; */
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.color};
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 220px;
-    /* position: sticky; */
 
     /* @media screen and (max-width: 768px) {
         height: 420vh;
@@ -130,35 +125,21 @@ const Frame = styled.div`
 `;
 
 const Line = styled.div`
-    /* width:100%; */
-    /* height: 1px; */
     margin-top: -20px;
     border-top: 1px solid rgb(113, 113, 113);
 `;
 
 const List = styled.div`
     width: 85%;
-    /* margin: 25px 0; */
-    /* border: 1px solid black; */
     color: ${props => props.theme.ContentListColor};
 `;
 
 const ProjectItem = styled.div`
-    /* border: 1px solid black; */
     width: 300px;
     height: 300px;
     margin: 35px 30px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* border: 1px solid black; */
-
-    /* @media screen and (max-width: 768px) {
-        width: 20vw;
-        height: 20vh;
-    } */
 `;
 
 const StyledImg = styled.img`
@@ -169,18 +150,9 @@ const StyledImg = styled.img`
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 10px;
-
-    /* transform: scale(1);
-    transition: transform .5s;
-
-    &:hover{
-        transform: scale(1.02);
-        transition: transform .5s;
-    } */
 `;
 
 const StyledBsGithub = styled(BsGithub)`
-    /* font-size: 20px; */
     margin-left: 10px;
     cursor: pointer;
 
@@ -201,9 +173,6 @@ const CareerItem = styled.div`
 `;
 
 const SkillsItem = styled.div`
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
     padding: 0 50px;
 `;
 

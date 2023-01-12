@@ -1,20 +1,13 @@
 import React, { useState, useCallback, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { ThemeProvider } from "styled-components";      // 전역 styled component 설정
-// import GlobalStyle from "./components/GlobalStyle";             // 전역 styled component 설정
 import { darkTheme, lightTheme } from "./Theme";     // 다크모드 색상 설정
-
-// import ScrollProgress from "./components/ScrollProgress";
-// import ModalSlide from "./components/ModalSlide";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
-// import TopButton from "./components/TopButton";
 
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);        // 다크모드 on off
-    const [isModalSlide, setIsModalSlide] = useState(false);    // 슬라이드 모달 on off
-
 
     return (
         <Frame>
@@ -23,10 +16,6 @@ function App() {
                 <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
                 <Content />
                 <Footer />
-                <div>
-                    {/* {isModalSlide && <ModalSlide scrollT={scrollT} setIsModalSlide={setIsModalSlide} />} */}
-                    {/* {scrollT > 300 && <TopButton isModalSlide={isModalSlide} />} */}
-                </div>
                 <GlobalStyle />
             </ThemeProvider>
         </Frame>

@@ -5,45 +5,46 @@ import { BsGithub } from "react-icons/bs"
 function Footer() {
     return (
         <Frame>
-            <div style={{flexGrow: "1"}}></div>
-            <div style={{margin: "0 30px"}}>@jm4293</div>
-            <div>2023.01.10</div>
-            <div style={{flexGrow: "8"}}></div>
-            <FooterIcon>
-                <FooterIconLink href="https://velog.io/@jm4293">Blog</FooterIconLink>
-            </FooterIcon>
-            <FooterIcon>
-                <FooterIconLink href="https://github.com/jm4293"><FooterIconImgGithub /></FooterIconLink>
-            </FooterIcon>
-            <div style={{flexGrow: "1"}}></div>
+                <div style={{ flexGrow: "1" }}></div>
+                <div style={{ margin: "0 30px" }}>@jm4293</div>
+                <div>2023.01.10</div>
+                <div style={{ flexGrow: "8" }}></div>
+                <FooterIcon>
+                    <FooterIconLink href="https://velog.io/@jm4293">Blog</FooterIconLink>
+                </FooterIcon>
+                <FooterIcon>
+                    <FooterIconLink href="https://github.com/jm4293"><FooterIconImgGithub /></FooterIconLink>
+                </FooterIcon>
+                <div style={{ flexGrow: "1" }}></div>
         </Frame>
     )
 }
 
 const Frame = styled.div`
-    /* width: 100%; */
-    height: 6vh;
+    width: 100%;
+    height: 10vh;
     border-top: 1px solid ${props => props.theme.color};
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 `;
 
 const FooterIcon = styled.div`
     cursor: pointer;
-    width: 80px;
+    margin: 0 30px;
     text-align: center;
+    
     transform: scale(1);
-    transition: transform .5s;
+    transition: transform .3s;
 
     &:hover{
-        transform: scale(1.2);
-        transition: transform .5s;
+        transform: scale(1.1);
+        transition: transform .3s;
     }
 `;
 
 const FooterIconLink = styled.a`
     text-decoration: none;
+    font-size: 16px;
     color: ${props => props.theme.FooterIcon};
 `;
 

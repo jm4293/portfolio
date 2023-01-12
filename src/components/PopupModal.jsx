@@ -68,35 +68,22 @@ function ModalPopup({ isModal, setIsModal, isModalNumber }) {
     )
 }
 
-const fadeIn = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`;
-
 const ModalBackGround = styled.div`
-    /* border: 2px solid blue; */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /* z-index: 999; */
+    z-index: 1000;
     background-color: rgba(39, 39, 39, 0.5);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* animation: ${props => props.isModalPopup ? fadeIn : null} 0.5s; */
 `;
 
 const Modal = styled.div`
     width: 50%;
-    /* min-width: 400px; */
     height: 70%;
-    /* max-height: 600px; */
     border: 1px solid black;
     box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
