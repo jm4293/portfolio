@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { BsGithub } from "react-icons/bs"
 
 function Footer() {
     return (
         <Frame>
                 <div style={{ flexGrow: "1" }}></div>
                 <div style={{ margin: "0 30px" }}>@jm4293</div>
-                <div>2023.01.10</div>
+                <div>2023.01.18</div>
                 <div style={{ flexGrow: "8" }}></div>
                 <FooterIcon>
                     <FooterIconLink href="https://velog.io/@jm4293">Blog</FooterIconLink>
                 </FooterIcon>
                 <FooterIcon>
-                    <FooterIconLink href="https://github.com/jm4293"><FooterIconImgGithub /></FooterIconLink>
+                    <FooterIconLink href="https://github.com/jm4293">GitHub</FooterIconLink>
                 </FooterIcon>
                 <div style={{ flexGrow: "1" }}></div>
         </Frame>
@@ -45,11 +44,6 @@ const FooterIcon = styled.div`
 const FooterIconLink = styled.a`
     text-decoration: none;
     font-size: 16px;
-    color: ${props => props.theme.FooterIcon};
-`;
-
-const FooterIconImgGithub = styled(BsGithub)`
-    transform: scale(1.5);
     color: ${props => props.theme.FooterIcon};
 `;
 
