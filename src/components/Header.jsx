@@ -49,7 +49,7 @@ function Header({ isDarkMode, setIsDarkMode, isModalSlide, setIsModalSlide }) {
                 <div ref={scrollref} style={{ fontSize: '24px' }}>jm's portfolio</div>
                 <HiddenItem change={change} onClick={() => window.scrollTo(0, 120)}>HOME</HiddenItem>
                 <HiddenItem change={change} onClick={() => window.scrollTo(0, 290)}>ABOUT</HiddenItem>
-                <HiddenItem change={change} onClick={() => window.scrollTo(0, 580)}>PROJECT</HiddenItem>
+                <HiddenItem change={change} onClick={() => window.scrollTo(0, 520)}>PROJECT</HiddenItem>
                 <HiddenItem change={change} onClick={() => window.scrollTo(0, 2020)}>CAREER</HiddenItem>
                 <HiddenItem change={change} onClick={() => window.scrollTo(0, 2350)}>SKILLS</HiddenItem>
                 <DarkModeIcon onClick={() => setIsDarkMode(!isDarkMode)}>{isDarkMode ? <BiMoon /> : <BiSun />}</DarkModeIcon>
@@ -70,7 +70,7 @@ const Frame = styled.div`
     color: ${props => props.theme.color};
     display: flex;
     flex-direction: column;
-
+    z-index: 999;
 `;
 
 const Top = styled.div`
