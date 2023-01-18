@@ -9,7 +9,7 @@ function ModalPopup({ isModal, setIsModal, isModalNumber }) {
         "REST API의 개념을 학습하게 되었으며 GET, POST요청과 MySQL Query를 사용하여 데이터베이스에 저장 및 요청을 학습하게 되었습니다.",
         "fetch와 axiox의 차이점을 알게되었으며 서버로 부터 데이터를 불러왔지만 원하는 데이터를 원하는 위치로 화면출력하는 작업에 어려움을 느끼게 되었습니다.",
         "Socket.io의 실시간 양방향 통신에 대해 학습하게 되었으며 http통신과 socket통신의 차이점을 알게되었습니다.",
-        "Firebase, Redux Toolkit, TypeSciprt를 사용하여 교보문고 사이트를 참고하여 도서구매 홈페이지 제작 계획으로 학습 중입니다.",
+        "Firebase, Redux Toolkit 사용하여 도서구매 홈페이지 제작 계획으로 학습 중입니다.",
         "프론트엔드만 아닌 JavaScirpt로 사용이 가능한 Express 프레임워크를 사용하여 백엔드의 기능과 웹의 흐름을 알게되었습니다."
     ];
 
@@ -19,7 +19,7 @@ function ModalPopup({ isModal, setIsModal, isModalNumber }) {
         "/images/login.gif",
         "/images/noticeboard.gif",
         "/images/chatting_.png",
-        "/images/typescript_.png",
+        "/images/bookstore_.png",
         "/images/server_.jpg"
     ];
 
