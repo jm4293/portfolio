@@ -19,8 +19,8 @@ function TopButton({change}) {
 
 const Frame = styled.div`
     position: fixed;
-    right: 5%;
-    bottom: 10%;
+    right: 3%;
+    bottom: 5%;
 `;
 
 const StyledBsArrowUpSquare = styled(BsArrowUpSquare)`
